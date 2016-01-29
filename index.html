@@ -8,10 +8,13 @@
     <title></title>
   </head>
   <body>
-    <div class="container">
-      <form id="order-pizza">
+    <div class="container"> <!--Start container-->
+
+      <form id="order-pizza"> <!--Start form-->
         <div class="row">
           <div class="col col-sm-6">
+
+            <!--Select size options-->
             <h5>Please select the size you would like:</h5>
 
             <div class="radio">
@@ -39,7 +42,11 @@
             </div>
           </div>
 
+          <!--End size options-->
+
           <h5>Please choose your toppings ($0.50 per):</h5>
+
+          <!--First toppings column-->
           <div class="col col-sm-3">
             <input type="checkbox" name="topping" value="pepperoni">pepperoni<br>
             <input type="checkbox" name="topping" value="black olives">black olives<br>
@@ -48,6 +55,7 @@
             <input type="checkbox" name="topping" value="bell peppers">bell peppers<br>
           </div>
 
+          <!--Secon toppings column-->
           <div class="col col-sm-3">
             <input type="checkbox" name="topping" value="mushrooms">mushrooms<br>
             <input type="checkbox" name="topping" value="artichoke">artichoke<br>
@@ -58,7 +66,15 @@
         </div>
 
         <button class="btn btn-info" type="submit" name="button">Place Order</button>
-      </form>
+
+      </form> <!--End Form-->
+
+      <div class="pizza-order">
+        <h3>Your Receipt</h3>
+            <p>Size: <span class="pizza-size"></span></p>
+            <p>Toppings: <span class="pizza-toppings"></span></p>
+            <p>Price: <span class="pizza-price"></span></p>
+      </div>
     </div> <!--End Container-->
   </body>
 </html>

@@ -17,16 +17,20 @@ Pizza.prototype.pizzaSizePrice = function() {
 };
 
 Pizza.prototype.pizzaToppingsPrice = function() {
-  for (i = 0; i < this.pizzaToppings.length; i++) {
+  for (var i = 0; i < this.pizzaToppings.length; i++) {
     this.pizzaPrice += 0.50;
   }
     return this.pizzaPrice;
 };
 
-//go through list of toppings selected and push them into an array
+function resetFields() {
+  $("form input[name=size]").attr('checked',false);
+  $("input:checkbox[name=topping]").attr('checked',false);
+}
 
 $(document).ready(function() {
   $("form#order-pizza").submit(function(event) {
+    event.preventDefault();
     debugger;
 
     var pizzaSize = $("form input[name=size]:checked").val();
@@ -34,11 +38,16 @@ $(document).ready(function() {
       $("input:checkbox[name=topping]:checked").each(function(){
       pizzaToppings.push($(this).val());
       });
-    var testPizza = new Pizza(pizzaSize, pizzaToppings)
-    testPizza.pizzaSizePrice(pizzaSize);
-    testPizza.pizzaToppingsPrice(pizzaToppings);
+    var newPizza = new Pizza(pizzaSize, pizzaToppings)
+    newPizza.pizzaSizePrice(pizzaSize);
+    newPizza.pizzaToppingsPrice(pizzaToppings);
+
+  $('.pizza-order').show();
+  $('.pizza-size').text(newPizza.pizzaSize);
+  $('.pizza-toppings').text(newPizza.pizzaToppings);
+  $('.pizza-price').text(newPizza.pizzaPrice);
 
 
-  event.preventDefault();
+  resetFields();
   });
 });
