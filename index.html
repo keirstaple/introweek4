@@ -9,7 +9,56 @@
   </head>
   <body>
     <div class="container">
+      <form id="order-pizza">
+        <div class="row">
+          <div class="col col-sm-6">
+            <h5>Please select the size you would like:</h5>
 
-    </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="size" value="small">small.............($9)<br>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input type="radio" name="size" value="medium">medium........($12)<br>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input type="radio" name="size" value="large">large.............($15)<br>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input type="radio" name="size" value="xlarge">xlarge...........($18)<br>
+              </label>
+            </div>
+          </div>
+
+          <h5>Please choose your toppings ($0.50 per):</h5>
+          <div class="col col-sm-3">
+            <input type="checkbox" name="topping" value="pepperoni">pepperoni<br>
+            <input type="checkbox" name="topping" value="black olives">black olives<br>
+            <input type="checkbox" name="topping" value="pepperoncini">pepperoncini<br>
+            <input type="checkbox" name="topping" value="feta cheese">feta cheese<br>
+            <input type="checkbox" name="topping" value="bell peppers">bell peppers<br>
+          </div>
+
+          <div class="col col-sm-3">
+            <input type="checkbox" name="topping" value="mushrooms">mushrooms<br>
+            <input type="checkbox" name="topping" value="artichoke">artichoke<br>
+            <input type="checkbox" name="topping" value="sundried tomatoes">sundried tomatoes<br>
+            <input type="checkbox" name="topping" value="jalapenos">jalapenos<br>
+            <input type="checkbox" name="topping" value="onions">onions<br>
+          </div>
+        </div>
+
+        <button class="btn btn-info" type="submit" name="button">Place Order</button>
+      </form>
+    </div> <!--End Container-->
   </body>
 </html>

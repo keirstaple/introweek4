@@ -1,22 +1,22 @@
-describe('Receipt', function() {
+describe('Pizza', function() {
   it('creates a receipt for the customer based on their order information', function() {
-    var testReceipt = new Receipt("Large","black olives",0);
-    expect(testReceipt.pizzaSize).to.equal("Large");
-    expect(testReceipt.pizzaToppings).to.equal("black olives");
-    expect(testReceipt.pizzaPrice).to.equal(0);
+    var testPizza = new Pizza("large","black olives",0);
+    expect(testPizza.pizzaSize).to.equal("large");
+    expect(testPizza.pizzaToppings).to.equal("black olives");
+    expect(testPizza.pizzaPrice).to.equal(0);
   });
 });
 
 describe('pizzaSizePrice', function() {
   it('calculate pizza price based on its size', function() {
-    var testReceipt = new Receipt('Large', 'black olives');
-    expect(testReceipt.pizzaSizePrice()).to.equal(15);
+    var testPizza = new Pizza('large', 'black olives');
+    expect(testPizza.pizzaSizePrice()).to.equal(15);
   });
 });
 
 describe('pizzaToppingsPrice', function() {
   it('calculate pizza price based on the number of toppings', function() {
-    var testReceipt = new Receipt('Large', ['black olives', 'pepperoni', 'pepperoncini']);
-    expect(testReceipt.pizzaToppingsPrice()).to.equal(1.5);
+    var testPizza = new Pizza('Large', ['black olives', 'pepperoni', 'pepperoncini']);
+    expect(testPizza.pizzaToppingsPrice()).to.equal(1.5);
   });
 });
