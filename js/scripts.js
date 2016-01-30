@@ -35,7 +35,6 @@ function resetFields() {
 $(document).ready(function() {
   $("form#order-pizza").submit(function(event) {
     event.preventDefault();
-    debugger;
 
     var pizzaSize = $("form input[name=size]:checked").val();
     var pizzaToppings = []
