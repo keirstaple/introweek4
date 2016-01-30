@@ -1,23 +1,23 @@
-# _{Ping-Pong}_
+# _{Pizza Order}_
 
-#### _{Enter a number and the program will play ping-pong with the numbers}_
+#### _{Select pizza size and toppings to calculate price}_
 
 #### By _**{Keir Staple}**_
 
 ## Description
 
-_{This is a program that allows you to enter a number and then the page will display every number from 1 to the entered number in an unordered list. Multiples of 3 will be replaced with 'ping', multiples of 5 will be replaced with 'pong', and multiples of both 3 and 5 will be replaced with 'pingpong'. There is a left sidebar indicating the level 2 course I would like to take.}_
+_{This program allows the user to hypothetically order one pizza and choose its size and the toppings they would like. Based on their input, the program will calculate the final price.}_
 
 ## Setup/Installation Requirements
 
-* _Fork this project from https://github.com/keirstaple/introweek3.git_
+* _Fork this project from https://github.com/keirstaple/introweek4.git_
 * _Clone this project to your local drive_
 * _Create a new branch for your personal edits and viewing_
 * _If you want edits to be included, push them back to your Github account and create a pull request_
 
 ## Known Bugs
 
-_Since the submit function appends the unordered list to the DOM, it is difficult to resubmit the form without refreshing the page to get new form results. You can resubmit new information but it will append after the previous list._
+_I have not made it so they can order more than one pizza yet._
 
 ## Support and contact details
 

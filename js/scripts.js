@@ -4,12 +4,16 @@ function Pizza (pizzaSize, pizzaToppings) {
   this.pizzaPrice = 0;
 }
 
+Pizza.prototype.priceDisplay = function() {
+  return "$" + this.pizzaPrice;
+}
+
 Pizza.prototype.pizzaSizePrice = function() {
-  if (this.pizzaSize === 'small') {
+  if (this.pizzaSize === 'Small') {
     return this.pizzaPrice += 9;
-  } else if (this.pizzaSize === 'medium') {
+  } else if (this.pizzaSize === 'Medium') {
     return this.pizzaPrice += 12;
-  } else if (this.pizzaSize === 'large') {
+  } else if (this.pizzaSize === 'Large') {
     return this.pizzaPrice += 15;
   } else {
     return this.pizzaPrice += 18;
@@ -36,7 +40,7 @@ $(document).ready(function() {
     var pizzaSize = $("form input[name=size]:checked").val();
     var pizzaToppings = []
       $("input:checkbox[name=topping]:checked").each(function(){
-      pizzaToppings.push($(this).val());
+      pizzaToppings.push(" " + $(this).val());
       });
     var newPizza = new Pizza(pizzaSize, pizzaToppings)
     newPizza.pizzaSizePrice(pizzaSize);
@@ -45,7 +49,7 @@ $(document).ready(function() {
   $('.pizza-order').show();
   $('.pizza-size').text(newPizza.pizzaSize);
   $('.pizza-toppings').text(newPizza.pizzaToppings);
-  $('.pizza-price').text(newPizza.pizzaPrice);
+  $('.pizza-price').text(newPizza.priceDisplay());
 
 
   resetFields();
