@@ -1,3 +1,8 @@
+.jumbotron{
+  background-image: url("../img/pizza.jpg");
+  background-size: cover;
+  color: white;
+}
 .pizza-order {
   display: none;
 }
