@@ -1,12 +1,14 @@
-# _{Pizza Order}_
+# _Pizza Order_
 
-#### _{Select pizza size and toppings to calculate price}_
+#### _Select pizza size and toppings to calculate price_
 
-#### By _**{Keir Staple}**_
+#### By _**Keir Staple**_
 
 ## Description
 
-_{This program allows the user to hypothetically order one pizza and choose its size and the toppings they would like. Based on their input, the program will calculate the final price.}_
+_This program allows the user to hypothetically order one pizza and choose its size and the toppings they would like. Based on their input, the program will calculate the final price._
+
+[Link to GH Pages](http://keirstaple.github.io/introweek4/)
 
 ## Setup/Installation Requirements
 
